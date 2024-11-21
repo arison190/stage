@@ -1,0 +1,113 @@
+/* login.scss */
+
+/* Utilisation de la couleur de fond pour la page */
+body {
+  background-color: #f0f2f5;
+}
+
+/* Conteneur principal du formulaire de connexion */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Boîte du formulaire avec des styles de fond, bordure et ombre */
+.login-box {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  animation: fadeUp 3s ease-in-out; /* Animation AOS fade-up */
+}
+
+/* Animation fadeUp pour les éléments entrant en vue */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Style du titre */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+  animation: fadeUp 2s ease-out;
+}
+
+/* Style des groupes d'input */
+.input-group {
+  margin-bottom: 20px;
+  animation: fadeUp 3s ease-out;
+  animation-delay: 0.5s; /* Délai pour un effet de séquencement */
+}
+
+/* Style des champs de saisie */
+.input-field {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus sur les champs de saisie */
+.input-field:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Style du bouton de soumission */
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  animation: fadeUp 3s ease-out;
+  animation-delay: 1s;
+}
+
+/* Changer la couleur du bouton au survol */
+button:hover {
+  background-color: #45a049;
+}
+
+/* Optionnel: Animation fade-in pour un effet d'apparition du formulaire */
+@keyframes fadeInForm {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Styles généraux pour l'animation */
+input, button {
+  opacity: 0;
+  animation: fadeInForm 1s ease-out forwards;
+}
+
+input {
+  animation-delay: 0.5s;
+}
+
+button {
+  animation-delay: 1s;
+}

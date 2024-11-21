@@ -1,0 +1,2 @@
+.list,.list .tableCell{background-color:#f5f5f5;color:#616161}.list .tableCell .cellWrapper{display:flex;align-items:center}.list .tableCell .cellWrapper .image{width:40px;height:40px;border-radius:50%;object-fit:cover;margin-right:10px;border:1px solid #210876}.list .tableCell .status{padding:5px;border-radius:5px}.list .tableCell .status.Approved{color:green;background-color:rgba(0,128,0,.15)}.list .tableCell .status.Pending{color:#daa520;background-color:rgba(173,188,1,.29)}
+/*# sourceMappingURL=list.min.css.map */

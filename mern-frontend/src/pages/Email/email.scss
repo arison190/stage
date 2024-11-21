@@ -1,0 +1,75 @@
+$email-form-background: #f9f9f9;
+$email-form-border: #ccc;
+$email-form-border-radius: 5px;
+$email-form-padding: 20px;
+$email-form-margin: 20px 0;
+$email-form-label-color: #333;
+$email-form-input-color: #555;
+$email-form-button-background: #007bff;
+$email-form-button-color: #fff;
+$email-form-button-hover-background: darken($email-form-button-background, 10%);
+
+.email-form {
+    background-color: $email-form-background;
+    border: 1px solid $email-form-border;
+    border-radius: $email-form-border-radius;
+    padding: $email-form-padding;
+    margin: $email-form-margin;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    h2 {
+        margin-bottom: 20px;
+        color: $email-form-label-color;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: $email-form-label-color;
+    }
+
+    input[type="email"],
+    input[type="text"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid $email-form-border;
+        border-radius: $email-form-border-radius;
+        margin-bottom: 15px;
+        font-size: 16px;
+        color: $email-form-input-color;
+
+        &:focus {
+            border-color: $email-form-button-background;
+            outline: none;
+        }
+    }
+
+    button {
+        background-color: $email-form-button-background;
+        color: $email-form-button-color;
+        padding: 10px 15px;
+        border: none;
+        border-radius: $email-form-border-radius;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: $email-form-button-hover-background;
+        }
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 14px;
+
+        &.success-message {
+            color: green; // Couleur pour le message de succès
+        }
+
+        &.error-message {
+            color: red; // Couleur pour le message d'erreur
+        }
+    }
+}

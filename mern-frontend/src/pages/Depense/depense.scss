@@ -1,0 +1,157 @@
+.depense-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+}
+
+.depense-form {
+  margin-bottom: 2rem;
+
+  .form-group {
+    margin-bottom: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+
+      &:focus {
+        outline: none;
+        border-color: #007bff;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+      }
+    }
+  }
+
+  button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
+
+.depenses-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+
+  th, td {
+    border: 1px solid #e0e0e0;
+    padding: 0.75rem;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+
+  tbody {
+    tr {
+      &:nth-child(even) {
+        background-color: #f8f9fa;
+      }
+
+      &:hover {
+        background-color: #e9ecef;
+      }
+    }
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+
+    button {
+      background-color: transparent;
+      border: 1px solid #ccc;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+
+      &[aria-label="Modifier"] {
+        color: #28a745;
+        &:hover {
+          background-color: #28a745;
+          color: white;
+        }
+      }
+
+      &[aria-label="Supprimer"] {
+        color: #dc3545;
+        &:hover {
+          background-color: #dc3545;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+.dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dialog-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.dialog-header {
+  margin-bottom: 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}
+
+.dialog-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

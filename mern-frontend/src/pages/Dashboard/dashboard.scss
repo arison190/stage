@@ -1,0 +1,9 @@
+.home {
+  display: flex;
+
+  .homeContainer {
+    flex: 6; /* Permet au contenu de prendre l'espace restant */
+    background-color:whitesmoke;
+    color: #616161;
+  }
+}

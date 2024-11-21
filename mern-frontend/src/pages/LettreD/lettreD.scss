@@ -1,0 +1,113 @@
+.lettre-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.lettre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lettre-form, .lettre-preview {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+
+    &:focus {
+      outline: none;
+      border-color: #007bff;
+    }
+  }
+}
+
+.print-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+}
+
+.lettre-content {
+  border: 1px solid #ddd;
+  padding: 20px;
+  min-height: 500px;
+  background-color: #f9f9f9;
+}
+
+.lettre-logos {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  .logo {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.lettre-date {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+.lettre-destinataire {
+  margin-bottom: 20px;
+}
+
+.lettre-signature {
+  margin-top: 40px;
+}
+
+@media print {
+  .lettre-form {
+    display: none;
+  }
+
+  .lettre-preview {
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .lettre-content {
+    border: none;
+    padding: 0;
+  }
+}

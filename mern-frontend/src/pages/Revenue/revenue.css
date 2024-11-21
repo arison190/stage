@@ -1,0 +1,125 @@
+@charset "UTF-8";
+/* src/pages/Revenue/Revenue.scss */
+.revenue-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f4f7fa;
+  height: 100vh;
+  animation: fadeIn 1s ease-in-out;
+  /* Animation pour la page */
+}
+
+.revenue-page h2 {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+  animation: slideFromLeft 1s ease-in-out;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px;
+}
+
+.cards-container .card {
+  width: 30%;
+  min-width: 250px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  transform: translateY(10px);
+  animation: fadeUp 0.6s ease-out;
+  /* Animation pour les cartes */
+  display: flex;
+  flex-direction: column;
+}
+
+.cards-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header h3 {
+  font-size: 1.5em;
+  color: #444;
+}
+
+.card-body {
+  font-size: 1em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.card-footer {
+  font-size: 1em;
+  color: #888;
+  text-align: right;
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+  margin-top: 15px;
+}
+
+.card-footer:hover {
+  color: #2c3e50;
+  transform: scale(1.1);
+  /* Agrandir légèrement au survol */
+}
+
+.intermediate-revenue {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #e8f5e9;
+  border: 1px solid #81c784;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #388e3c;
+}
+
+.intermediate-revenue h4 {
+  font-size: 1.1em;
+  color: #388e3c;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
